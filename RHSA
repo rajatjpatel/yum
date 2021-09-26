@@ -1,0 +1,36 @@
+yum updateinfo | less -NFiX
+yum check-update --security
+yum updateinfo --security
+yum updateinfo list --security | less -NFiX
+yum updateinfo list updates | grep Critical
+yum list available kernel
+uname -r
+yum update --security
+reboot
+yum update-minimal --advisory RHSA-2018:1965 --security
+yum updateinfo RHSA-2018:1965 | less -NFiX
+yum updateinfo list cve | less -NFiX
+yum updateinfo list security all
+yum updateinfo list sec
+yum updateinfo list security installed
+yum updateinfo list --cve CVE-2018-1111
+yum update --cve CVE-2018-1111
+yum --security list updates
+yum list-sec
+yum --security check-update
+rpmkeys --checksig package_file.rpm
+yum install -advisory
+yum updateinfo list --security --sec-severity=Low
+
+
+# References
+How to Install or list only errata using Yum on Red Hat Enterprise Linux ?  - https://access.redhat.com/solutions/10021
+Red Hat Product Security Center - https://access.redhat.com/security/
+Security Contacts and Procedures - https://access.redhat.com/security/team/contact/#contact
+Notifications and Advisories -https://access.redhat.com/security/updates/advisory
+Understanding Red Hat security ratings - https://access.redhat.com/security/updates/classification
+Backporting Security Fixes - https://access.redhat.com/security/updates/backporting/
+Common Vulnerabilities and Exposures - https://cve.mitre.org/
+National Vulnerability Database - https://nvd.nist.gov/
+Red Hat CVE Database - https://access.redhat.com/security/security-updates/#/cve
+Keeping Your System Up-to-Date chapter in the Red Hat Enterprise Linux 7 Security Guide at https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/security_guide/#chap-Keeping_Your_System_Up-to-Date 
